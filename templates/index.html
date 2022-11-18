@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracking details page</title>
+
+</head>
+<body>
+    <form id="tackingForm" method="post" action="/fedex">
+        <label for="trackingNumber">
+            Tracking Number
+        </label>
+        <input type="text" id="trackingNumber" name="trackingNumber" value="{{ tracking_number }}"/>
+        <input type="submit" id="submit" value="Get Tracking Details">
+    </form>
+    {% if data %}
+        <p>Tracking info</p>
+        <pre id="json">{{data}}}</pre>
+    {% endif %}
+</body>
+</html>
